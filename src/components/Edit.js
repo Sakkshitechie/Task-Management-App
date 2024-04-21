@@ -3,8 +3,6 @@ import {Button, Form} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Employees from './Employees';
 import {useNavigate} from 'react-router-dom';
-import {v4 as uuid} from "uuid";
-import e from 'express';
 
 function Edit(){
     const[name, setName] = useState("");
@@ -48,5 +46,6 @@ function Edit(){
        </div>
     )
 }
+
 export default Edit;
 
