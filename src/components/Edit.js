@@ -17,11 +17,12 @@ function Edit(){
 
     const handleSubmit=(e) => {
         e.preventDefault();
+        
         let a = Employees[index];
         a.Name = name;
         a.Age = age;
 
-        history("/");
+        history('/');
     }
 
     useEffect(()=>{
@@ -34,14 +35,14 @@ function Edit(){
        <div>
             <Form className="d-grid gap-2" style={{margin:"15rem"}}>
             <Form.Group className="mb-3" controlId="formName">
-                <Form.Control type="text" placeholder="Enter Name" value={name} required onchange={(e)=> setName(e.target.value)}>
+                <Form.Control type="text" placeholder="Enter Name" value={name} required onChange={(e)=> setName(e.target.value)}>
                 </Form.Control>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formAge">
-                <Form.Control type="number" placeholder="Enter Age" value={age} required onchange={(e)=> setAge(e.target.value)}>
+                <Form.Control type="number" placeholder="Enter Age" value={age} required onChange={(e)=> setAge(e.target.value)}>
                 </Form.Control>
             </Form.Group>
-            <Button onclick={(e)=>handleSubmit(e)} type="submit">Update</Button>       
+            <Button onClick={(e)=>handleSubmit(e)} type="Submit">Update</Button>       
             </Form>
        </div>
     )
